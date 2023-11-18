@@ -14,11 +14,12 @@ const App = () => {
     fetch(`https://api.unsplash.com/photos/random?query=${word}&client_id=${UNPLASH_KEY}`)
       .then((res)=> res.json())
       .then((data) => {
-        console.log(data);
+        console.log(data);        
       })
       .catch((err) => {
         console.log(err);
       })
+      setWord('');
   }
  
     return (
